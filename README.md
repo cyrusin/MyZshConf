@@ -1,0 +1,2 @@
+# MyZshConf
+my '.zshrc'
