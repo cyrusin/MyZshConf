@@ -101,29 +101,21 @@ alias -s bz2='tar -xjvf'
 # ******** my old .bashrc(~/.bashrc) *********
 # ******** zsh is running well with bash, so copy .bashrc here ********
 
+# LUA
 LUAJIT_LIB=/usr/local/lib
 LUAJIT_INC=/usr/local/include/luajit-2.0
 export LUAJIT_LIB
 export LUAJIT_INC
 
+#JAVA
+export JAVA_HOME=/usr/lib/jvm/jdk-8u6-sun
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+#Node.js for Hexo
 export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-#自定义命令
-alias go31="ssh root@10.***.31.31 -p 22022" #****测试线
-alias go18="ssh root@10.***.13.18 -p 22022" #*-***测试线
-#以下为cibn正式线
-alias cibn135="bash ~/cmd/goto 135"
-alias cibn136="bash ~/cmd/goto 136"
-alias cibn137="bash ~/cmd/goto 137"
-alias cibn138="bash ~/cmd/goto 138"
-alias cibn131="bash ~/cmd/goto 131"
-alias cibn132="bash ~/cmd/goto 132"
-#以下为m-box正式线
-alias box161="bash ~/cmd/goto 161"
-alias box162="bash ~/cmd/goto 162"
-alias box163="bash ~/cmd/goto 163"
-alias box164="bash ~/cmd/goto 164"
 
 # *********plugins**********
 #
@@ -131,3 +123,4 @@ alias box164="bash ~/cmd/goto 164"
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
+
