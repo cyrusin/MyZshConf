@@ -45,7 +45,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump)
+plugins=(git autojump web-search)
 
 # User configuration
 
@@ -112,6 +112,11 @@ export JAVA_HOME=/usr/lib/jvm/jdk-8u6-sun
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
+
+#GO
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/work
+export PATH=$PATH:$GOPATH/bin
 
 #Node.js for Hexo
 export NVM_DIR=~/.nvm
