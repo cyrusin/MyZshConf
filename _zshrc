@@ -122,6 +122,14 @@ export PATH=$PATH:$GOPATH/bin
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+#pyenv
+#after run command below: 
+#'curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash'
+#https://github.com/yyuu/pyenv-installer
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # *********plugins**********
 #
 # autojump
